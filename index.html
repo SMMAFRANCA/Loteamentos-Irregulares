@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <style>
+        html, body {
+            background-color: #ffffff;
+        }
+        .ol-control > * {
+            background-color: #f8f8f8!important;
+            color: #444444!important;
+            border-radius: 0px;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #444444!important;
+        }
+        .search-layer-input-search {
+            background-color: #f8f8f8!important;
+        }
+        .ol-control > *:focus, .ol-control >*:hover {
+            background-color: rgba(248, 248, 248, 0.7)!important;
+        } 
+        .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 2px !important;
+        } 
+        </style>
+
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>Loteamentos irregulares</title>
+    </head>
+    <body>
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources/qgis2web_expressions.js"></script>
+<script src="resources/proj4.js"></script>
+        <script>proj4.defs('EPSG:31983','+proj=utm +zone=23 +south +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs');</script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="./resources/ol-layerswitcher.js"></script>
+        <script src="resources/photon-geocoder-autocomplete.min.js"></script>
+        <script src="resources/olms.js"></script>
+        <script src="layers/AODAUSFase1_3.js"></script><script src="layers/AODAUSFase2_4.js"></script><script src="layers/AODBaixaDensidadeNvel1_5.js"></script><script src="layers/AODBaixaDensidadeNvel2_6.js"></script><script src="layers/AODBaixaDensidadeNvel3_7.js"></script><script src="layers/AODreaUrbanaConsolidada_8.js"></script><script src="layers/ARAAterros_9.js"></script><script src="layers/ARAETELagoas_10.js"></script><script src="layers/ARAIncongrunciasemAPP_11.js"></script><script src="layers/AROAPP_12.js"></script><script src="layers/AROFaixadeCuestas_13.js"></script><script src="layers/ARORemanescentesFlorestais_14.js"></script><script src="layers/AROreadeAmortecimento_15.js"></script><script src="layers/DelimitaodaBaciadoRibeirodaOna_16.js"></script><script src="layers/LimitedaBaciadoRioCanoasLeiC1002006_17.js"></script><script src="layers/LimitedaBaciadoRioCanoasLeiC4322024_18.js"></script><script src="layers/APP_19.js"></script><script src="layers/Massasdgua_20.js"></script><script src="layers/RiosDuplos_21.js"></script><script src="layers/RiosSimples_22.js"></script><script src="layers/Nascentes_23.js"></script><script src="layers/Massasdgua_24.js"></script><script src="layers/APP_25.js"></script><script src="layers/RiosSimples_26.js"></script><script src="layers/Nascente_27.js"></script><script src="layers/StioSantaRosa_28.js"></script><script src="layers/CondomnioBrilhodoSol_29.js"></script><script src="layers/Quinho10_30.js"></script><script src="layers/Quinho9_31.js"></script><script src="layers/Quinho2_32.js"></script><script src="layers/StioCapelinha_33.js"></script><script src="layers/ParquedosIpsRemanescente_34.js"></script><script src="layers/RecantoLuaDourada_35.js"></script><script src="layers/PortaldosIndais_36.js"></script><script src="layers/RecantoEmanuelMatrcula95783_37.js"></script><script src="layers/RecantoEmanuelMatrcula95782_38.js"></script><script src="layers/RecantodaMata_39.js"></script><script src="layers/RecantoPrimavera_40.js"></script><script src="layers/Matrcula106206_41.js"></script><script src="layers/StioNossaSenhoraAparecida_42.js"></script><script src="layers/FazendaBarroPretoeBambus_43.js"></script><script src="layers/LoteamentosClandestinos11unid_44.js"></script>
+        <script src="styles/AODAUSFase1_3_style.js"></script><script src="styles/AODAUSFase2_4_style.js"></script><script src="styles/AODBaixaDensidadeNvel1_5_style.js"></script><script src="styles/AODBaixaDensidadeNvel2_6_style.js"></script><script src="styles/AODBaixaDensidadeNvel3_7_style.js"></script><script src="styles/AODreaUrbanaConsolidada_8_style.js"></script><script src="styles/ARAAterros_9_style.js"></script><script src="styles/ARAETELagoas_10_style.js"></script><script src="styles/ARAIncongrunciasemAPP_11_style.js"></script><script src="styles/AROAPP_12_style.js"></script><script src="styles/AROFaixadeCuestas_13_style.js"></script><script src="styles/ARORemanescentesFlorestais_14_style.js"></script><script src="styles/AROreadeAmortecimento_15_style.js"></script><script src="styles/DelimitaodaBaciadoRibeirodaOna_16_style.js"></script><script src="styles/LimitedaBaciadoRioCanoasLeiC1002006_17_style.js"></script><script src="styles/LimitedaBaciadoRioCanoasLeiC4322024_18_style.js"></script><script src="styles/APP_19_style.js"></script><script src="styles/Massasdgua_20_style.js"></script><script src="styles/RiosDuplos_21_style.js"></script><script src="styles/RiosSimples_22_style.js"></script><script src="styles/Nascentes_23_style.js"></script><script src="styles/Massasdgua_24_style.js"></script><script src="styles/APP_25_style.js"></script><script src="styles/RiosSimples_26_style.js"></script><script src="styles/Nascente_27_style.js"></script><script src="styles/StioSantaRosa_28_style.js"></script><script src="styles/CondomnioBrilhodoSol_29_style.js"></script><script src="styles/Quinho10_30_style.js"></script><script src="styles/Quinho9_31_style.js"></script><script src="styles/Quinho2_32_style.js"></script><script src="styles/StioCapelinha_33_style.js"></script><script src="styles/ParquedosIpsRemanescente_34_style.js"></script><script src="styles/RecantoLuaDourada_35_style.js"></script><script src="styles/PortaldosIndais_36_style.js"></script><script src="styles/RecantoEmanuelMatrcula95783_37_style.js"></script><script src="styles/RecantoEmanuelMatrcula95782_38_style.js"></script><script src="styles/RecantodaMata_39_style.js"></script><script src="styles/RecantoPrimavera_40_style.js"></script><script src="styles/Matrcula106206_41_style.js"></script><script src="styles/StioNossaSenhoraAparecida_42_style.js"></script><script src="styles/FazendaBarroPretoeBambus_43_style.js"></script><script src="styles/LoteamentosClandestinos11unid_44_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/Autolinker.min.js"></script>
+        <script src="./resources/qgis2web.js"></script>        
+    </body>
+</html>
