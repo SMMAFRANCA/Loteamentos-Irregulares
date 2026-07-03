@@ -766,66 +766,14 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_label_StioSantaRosa_28_eval_expression(context) {
-    // 'Área: ' || format_number("Área (m²)", 2, NULL, FALSE, FALSE) || ' m²'
+function exp_label_LoteamentosClandestinos13unid_45_eval_expression(context) {
+    // nome
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (('Área: ' + fnc_format_number([feature.get('Área (m²)') ,2,null,False,False], context)) + ' m²');
+        return feature.get('nome') ;
     } else {
-        return (('Área: ' + fnc_format_number([feature.get('Área (m²)') ,2,null,False,False], context)) + ' m²');
-    }
-}
-
-
-function exp_label_Quinho10_30_eval_expression(context) {
-    // Name || '\n' || ' Área: ' || format_number(area_m2, 2, NULL, FALSE, FALSE) || ' m²'
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return ((((feature.get('Name')  + '\n') + ' Área: ') + fnc_format_number([feature.get('area_m2') ,2,null,False,False], context)) + ' m²');
-    } else {
-        return ((((feature.get('Name')  + '\n') + ' Área: ') + fnc_format_number([feature.get('area_m2') ,2,null,False,False], context)) + ' m²');
-    }
-}
-
-
-function exp_label_Quinho9_31_eval_expression(context) {
-    // Name || '\n' || ' Área: ' || format_number(area_m2, 2, NULL, FALSE, FALSE) || ' m²'
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return ((((feature.get('Name')  + '\n') + ' Área: ') + fnc_format_number([feature.get('area_m2') ,2,null,False,False], context)) + ' m²');
-    } else {
-        return ((((feature.get('Name')  + '\n') + ' Área: ') + fnc_format_number([feature.get('area_m2') ,2,null,False,False], context)) + ' m²');
-    }
-}
-
-
-function exp_label_Quinho2_32_eval_expression(context) {
-    // Name || '\n' || ' Área: ' || format_number(area_m2, 2, NULL, FALSE, FALSE) || ' m²'
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return ((((feature.get('Name')  + '\n') + ' Área: ') + fnc_format_number([feature.get('area_m2') ,2,null,False,False], context)) + ' m²');
-    } else {
-        return ((((feature.get('Name')  + '\n') + ' Área: ') + fnc_format_number([feature.get('area_m2') ,2,null,False,False], context)) + ' m²');
-    }
-}
-
-
-function exp_label_LoteamentosClandestinos11unid_44_eval_expression(context) {
-    // nome || '\n' || ' Área: ' || area || ' m²'
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return ((((feature.get('nome')  + '\n') + ' Área: ') + feature.get('area') ) + ' m²');
-    } else {
-        return ((((feature.get('nome')  + '\n') + ' Área: ') + feature.get('area') ) + ' m²');
+        return feature.get('nome') ;
     }
 }
